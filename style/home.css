@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 /* Corpo da página */
@@ -29,21 +29,31 @@ header {
     padding: 10px 0;
 }
 
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
 header .logo img {
     max-height: 50px;
 }
 
-header nav {
+/* header nav {
     float: right;
-}
+    margin-bottom: 50px;
+} */
 
 header nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
     display: inline;
     margin-left: 15px;
+    
 }
 
 header nav ul li a {
@@ -55,7 +65,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-
+/* 
 img {
     width: 100%;
     height: auto; 
@@ -67,23 +77,39 @@ img {
         height: 200px;
         object-fit: cover;
     
-    
-}
+} */
 
 
 /* Banner */
 .banner {
-    /* background: url('banner.jpg') no-repeat center center/cover; */
-    color: #7F939C;
-    padding: 100px 0;
-    text-align: center;
-    background-color:#F2F3F0;
+    background: url('/src/banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    background-size: cover;  
+    background-position: center;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+    /* background-color:#2A4957; */
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Cor preta com 50% de opacidade */
 }
 
 .banner-content {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px;
+    font-weight: bold;
 }
+
+
 
 .banner h1 {
     font-size: 2.5em;
@@ -92,6 +118,7 @@ img {
 
 .banner p {
     font-size: 1.2em;
+    line-height: 1.6;
 }
 
 /* Serviços */
@@ -112,7 +139,7 @@ img {
 }
 
 .card {
-    background: #fff;
+    background: #A9B4B9;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
