@@ -50,8 +50,7 @@ header .logo img {
 header nav ul {
     list-style: none;
     display: flex;
-    /* margin: 0;
-    padding: 0; */
+    
 }
 
 header nav ul li {
@@ -78,7 +77,7 @@ header nav ul li a:hover {
     padding: 150px 0;
     position: relative;
     overflow: hidden;
-    /* background-color:#2A4957; */
+    
 }
 
 .banner::before {
@@ -88,7 +87,7 @@ header nav ul li a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.2); /* Cor preta com 50% de opacidade */
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 
 .banner-content {
@@ -97,8 +96,6 @@ header nav ul li a:hover {
     padding: 20px;
     font-weight: bold;
 }
-
-
 
 .banner h1 {
     font-size: 2.5em;
@@ -109,6 +106,7 @@ header nav ul li a:hover {
     font-size: 1.2em;
     line-height: 1.6;
 }
+
 
 /* Serviços */
 .services {
@@ -171,12 +169,6 @@ header nav ul li a:hover {
         transform: translateY(-2px);
     }
 
-/* Contato */
-.contact {
-    background: #f9f9f9;
-    padding: 40px 0;
-    text-align: center;
-}
 
 /* Botão de WhatsApp flutuante */
 .whatsapp-button {
