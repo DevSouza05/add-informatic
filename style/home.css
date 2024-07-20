@@ -24,9 +24,14 @@ body {
 
 /* Header */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #2A4957;
     color: #fff;
     padding: 10px 0;
+    z-index: 1000; 
 }
 
 header .container {
@@ -35,49 +40,33 @@ header .container {
     align-items: center; 
 }
 
+.header nav {
+    display: flex;
+}
 header .logo img {
     max-height: 50px;
 }
 
-/* header nav {
-    float: right;
-    margin-bottom: 50px;
-} */
-
 header nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    /* margin: 0;
+    padding: 0; */
 }
 
 header nav ul li {
-    display: inline;
     margin-left: 15px;
-    
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
 }
-
-/* 
-img {
-    width: 100%;
-    height: auto; 
-}
-
-.bannert img{
-   
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-    
-} */
 
 
 /* Banner */
@@ -231,4 +220,22 @@ footer {
 footer address p {
     margin-bottom: 5px;
     text-align: center;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
 }
