@@ -135,6 +135,12 @@ header nav ul li a:hover {
     width: 30%;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
@@ -157,8 +163,13 @@ header nav ul li a:hover {
     color: #fff; 
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease transform 0.2s ease;
 }
+
+    .btn:hover{
+        background-color: #6a7f86;
+        transform: translateY(-2px);
+    }
 
 /* Contato */
 .contact {
@@ -183,6 +194,20 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,20%,50%,80%,100%{
+        transition: translateY(0);
+    }
+    40%{
+        transition: translateY(-20px)
+    }
+    60%{
+        transition: translateY(-10px)
+    }
 }
 
 .whatsapp-button box-icon {
