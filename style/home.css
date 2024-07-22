@@ -64,11 +64,6 @@ header nav ul li a {
     font-weight: bold;
 }
 
-.menu-toggle {
-    display: none; 
-}
-
-
 @media screen and (max-width: 768px) {
    
     header {
@@ -107,32 +102,77 @@ header nav ul li a {
         margin: 10px 0;
         margin-left: 30px;
     }
+}
 
-    .menu-toggle {
-        display: block;
-        position: relative;
-        cursor: pointer;
-        z-index: 1000; /* Garante que o ícone de hambúrguer esteja sobreposto */
+/* menu hamburguer */
+.menu-btn {
+    display: none; /* Oculta por padrão em telas maiores */
+}
+
+.menu-btn i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Mostra o ícone do menu hamburguer */
     }
 
-    .menu-icon {
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: relative;
-    }
-
-    .burger-icon {
-        width: 30px;
-        height: 2px;
-        background-color: #000;
+    .menu ul {
+        display: none; /* Oculta a lista de itens do menu */
+        flex-direction: column;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: transform 0.3s ease;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1; /* Garante que o menu fique acima de outros elementos */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil para o menu dropdown */
+    }
+
+    .menu ul.active {
+        display: flex; /* Mostra a lista quando o menu hamburguer é clicado */
+    }
+
+    .menu ul li {
+        margin-right: 0;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #555; /* Linhas separadoras entre os itens do menu */
     }
 }
+
 
 /* Banner */
 .banner {
