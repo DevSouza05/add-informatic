@@ -1,13 +1,10 @@
 const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".menu ul");
+console.log(menuBtn)
+const menuNav = document.querySelector(".menu nav ul");
+console.log(menuNav)
 
-menuBtn.addEventListener("click", function () {
-    menu.classList.toggle("active");
-});
+menuBtn.addEventListener("click", ()=> {
+    menuNav.classList.toggle("active");
 
-// Fechar o menu ao clicar em um link
-document.querySelectorAll('.menu ul li a').forEach(item => {
-    item.addEventListener('click', () => {
-        menu.classList.remove('active');
-    });
-});
+    console.log("mostrou")
+})
