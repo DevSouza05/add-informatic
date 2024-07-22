@@ -362,7 +362,7 @@ footer {
 
 .footer-columns {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     justify-content: space-around;
 }
 
@@ -373,6 +373,13 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+/* Linhas brancas entre as colunas */
+.footer-column:not(:last-child) {
+    border-right: 1px solid #fff; 
+    padding-right: 15px; 
 }
 
 footer address p {
@@ -384,5 +391,10 @@ footer address p {
     .footer-column {
         text-align: center;
         margin: 10px 0;
+    }
+
+    .footer-column {
+        border-right: none;
+        padding: 3px;
     }
 }
