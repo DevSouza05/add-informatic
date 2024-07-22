@@ -68,6 +68,7 @@ header nav ul li a {
     display: none; 
 }
 
+
 @media screen and (max-width: 768px) {
    
     header {
@@ -90,7 +91,7 @@ header nav ul li a {
         transition: max-height 0.3s ease-out;
         max-height: 0;
         overflow: hidden;
-        z-index: -1;
+        z-index: 100;
     }
 
     header nav.active {
@@ -107,8 +108,30 @@ header nav ul li a {
         margin-left: 30px;
     }
 
-  
+    .menu-toggle {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        z-index: 1000; /* Garante que o ícone de hambúrguer esteja sobreposto */
+    }
 
+    .menu-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .burger-icon {
+        width: 30px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+    }
 }
 
 /* Banner */
